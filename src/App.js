@@ -1,7 +1,13 @@
 import logo from './logo.svg';
 import './App.css';
+import { useState } from 'react';
+import ButtonA from './components/ButtonA';
+import ButtonB from './components/ButtonB';
+
 
 function App() {
+  const [isButtonA, setIsButtonA] = useState(true);
+
   return (
     <div className="App">
       <header className="App-header">
@@ -17,6 +23,15 @@ function App() {
         >
           Learn React
         </a>
+        { isButtonA 
+          ? (<ButtonA
+              onHide={() => setIsButtonA(false)}
+            >
+            </ButtonA>) 
+          : (<ButtonB
+              onHide={() => setIsButtonA(true)}
+            ></ButtonB>)
+        }        
       </header>
     </div>
   );
