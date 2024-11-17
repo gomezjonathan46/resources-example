@@ -1,5 +1,7 @@
-export default function ButtonA({onHide}) {
+export default function ButtonA({ onHide }) {
   return (
-    <button onClick={onHide}>Button A</button>
-  )
+    <button onClick={onHide} class="rounded-lg border px-3 py-1 text-white">
+      Button A
+    </button>
+  );
 }
